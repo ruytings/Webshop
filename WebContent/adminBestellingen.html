@@ -1,0 +1,91 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<title>Spelvertier - Admin - Bestellingen</title>
+<script type="text/javascript" src="adminBestellingen.js"></script>
+</head>
+<body onload="getAllData();">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Spelvertier (Admin)</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="adminBestellingen.html">Bekijk bestellingen</a></li>
+        <li><a href="adminCatalogus.html">Catalogus wijzigen</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+	  <li><a href="login.html">Uitloggen</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+    <h1>Bestellingen</h1>
+    <p id="error"></p>
+
+	<table class="table" id="overview">  
+	</table> 
+	
+	<h1>Bestelling</h1>
+	<p>(Om een lopende bestelling te bewerken, moet je de productID en de userID van de bestelling ingeven om zo de hoeveelheid aan te kunnen passen.)</p>
+		<div class="row">
+			<div class="col-md-12">
+				<form id="action" action="" onsubmit="return addItem('add');"
+					class="form-horizontal" method="post" role="form">
+					<div class="form-group ">
+						<label for="user" class="col-sm-2 control-label">ID User</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="user" name="user"
+								placeholder="" value=""> <span class="help-block"></span>
+						</div>
+					</div>
+
+					<div class="form-group ">
+						<label for="product" class="col-sm-2 control-label">ID Product</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="product"
+								name="product" placeholder="" value=""> <span
+								class="help-block"></span>
+						</div>
+					</div>
+
+					<div class="form-group ">
+						<label for="quantity" class="col-sm-2 control-label">Hoeveelheid</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="quantity" name="quantity"
+								placeholder="" value=""> <span class="help-block"></span>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="" class="col-sm-2 control-label"></label>
+						<div class="col-sm-10">
+							<button type="submit" class="btn btn-primary">
+								<span class="glyphicon glyphicon-circle-arrow-right"></span>
+								Toevoegen/Bewerken
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+</div>	
+</body>
+</html>
